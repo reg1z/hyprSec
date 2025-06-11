@@ -1,0 +1,18 @@
+services:
+  hyprsec-test:
+    image: archlinux:latest
+    container_name: hyprsec-test
+    stdin_open: true
+    tty: true
+    volumes:
+      - ../:/home/testuser/hyprsec:rw
+    working_dir: /home/testuser/hyprsec
+    command: /bin/bash
+    environment:
+      - TERM=xterm-256color
+    network_mode: host
+    privileged: false
+    cap_add:
+      - SYS_ADMIN
+    security_opt:
+      - seccomp:unconfined
