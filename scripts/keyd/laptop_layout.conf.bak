@@ -1,0 +1,427 @@
+[ids]
+0001:0001:a38e6885
+0001:0001:70533846
+
+[global]
+default_layout = qwerty
+
+[main]
+##### custom changes
+
+#shift = oneshot(shift)
+
+# print screen is now right meta/win/super
+sysrq = rightmeta
+
+# Caps = Escape
+#capslock = timeout(esc, 180, layer(cursor)) # cursorlayer hold
+capslock = esc
+
+
+# Spacebar for workspaces
+space = timeout(space, 150, layer(workspaces))
+
+# symbol layer
+rightalt = layer(symbol)
+
+
+### LAYOUTS
+###################### QWERTY  ######################
+[qwerty:layout]
+- = -
+= = =
+
+q = q
+w = w
+e = e
+r = r
+t = t
+y = y
+u = u
+i = i
+o = o
+p = p
+[ = [
+] = ]
+\ = \
+
+a = a
+s = s
+d = d
+f = f
+g = g
+h = h
+j = j
+k = k
+l = l
+; = ;
+' = '
+
+z = z
+x = x
+c = c
+v = v
+b = b
+n = n
+m = m
+, = ,
+. = .
+/ = /
+
+
+###################### QWERTY MIRYOKU ##################
+[miryoku_qwerty:layout]
+- = -
+= = =
+
+q = q
+w = w
+e = e
+r = r
+t = t
+y = y
+u = u
+i = i
+o = o
+p = p
+[ = [
+] = ]
+\ = \
+
+g = g
+h = h
+
+' = '
+
+z = z
+x = x
+c = c
+v = v
+b = b
+n = n
+m = m
+, = ,
+. = .
+/ = /
+
+a = timeout(a, 185, layer(meta))
+s = timeout(s, 185, layer(alt))
+d = timeout(d, 150, layer(control))
+f = timeout(f, 120, layer(shift))
+
+j = timeout(j, 120, layer(shift))
+k = timeout(k, 150, layer(control))
+l = timeout(l, 185, layer(alt))
+; = timeout(;, 185, layer(meta))
+
+
+################################# ENTHIUM ################################
+[enthium:layout]
+
+- = [
+= = ]
+
+capslock = b
+
+leftalt = timeout(esc, 150, layer(alt))
+rightalt = timeout(r, 150, layer(symbol))
+
+rightshift = rightshift
+rightcontrol = rightcontrol
+
+q = q
+w = y
+e = o
+r = u
+
+t = ;
+y = x
+
+u = l
+i = d
+o = w
+p = z
+[ = leftalt
+] = rightalt
+
+a = c
+s = i
+d = e
+f = a
+
+g = ,
+h = k
+
+j = h
+k = t
+l = n
+; = s
+' = v
+
+z = '
+x = -
+c = =
+v = .
+
+b = /
+n = j
+
+m = m
+, = g
+. = p
+/ = f
+
+
+#################################### ENTHIUM MIRYOKU ##############################
+[miryoku_enthium:layout]
+
+- = [
+= = ]
+
+leftalt = timeout(esc, 150, layer(number))
+rightalt = timeout(r, 150, layer(symbol))
+
+rightshift = rightshift
+rightcontrol = rightcontrol
+
+capslock = b
+
+q = q
+w = y
+e = o
+r = u
+
+t = ;
+y = x
+
+u = l
+i = d
+o = w
+p = z
+[ = leftalt
+] = rightalt
+
+a = timeout(c, 185, layer(meta))
+s = timeout(i, 185, layer(alt))
+d = timeout(e, 150, layer(control))
+f = timeout(a, 120, layer(shift))
+
+g = ,
+h = k
+
+j = timeout(h, 120, layer(shift))
+k = timeout(t, 150, layer(control))
+l = timeout(n, 185, layer(alt))
+; = timeout(s, 185, layer(meta))
+' = v
+
+z = '
+x = -
+c = =
+v = .
+
+b = /
+n = j
+
+m = m
+, = g
+. = p
+/ = f
+
+
+
+####################### ENGRAMMER ######################
+[engrammer:layout]
+
+- = [
+= = ]
+
+q = b
+w = y
+e = o
+r = u
+t = '
+y = ;
+u = l
+i = d
+o = w
+p = v
+[ = z
+] = =
+
+a = c
+s = i
+d = e
+f = a
+g = ,
+h = .
+j = h
+k = t
+l = s
+; = n
+' = q
+
+z = g
+c = j
+v = k
+b = -
+n = /
+m = r
+, = m
+. = f
+/ = p
+
+
+
+
+############################### ENGRAMMER MIRYOKU ############################
+[miryoku_engrammer:layout]
+
+- = [
+= = ]
+
+q = b
+w = y
+e = o
+r = u
+t = '
+y = ;
+u = l
+i = d
+o = w
+p = v
+[ = z
+] = =
+
+g = ,
+h = .
+
+' = q
+
+z = g
+c = j
+v = k
+b = -
+n = /
+m = r
+, = m
+. = f
+/ = p
+
+a = timeout(c, 165, layer(meta))
+s = timeout(i, 165, layer(alt))
+d = timeout(e, 140, layer(control))
+f = timeout(a, 100, layer(shift))
+
+j = timeout(h, 100, layer(shift))
+k = timeout(t, 140, layer(control))
+l = timeout(s, 165, layer(alt))
+; = timeout(n, 165, layer(meta))
+
+
+### Layers
+################ WORKSPACES LAYER #############################
+
+[workspaces]
+s = M-1
+d = M-2
+f = M-3
+
+w = M-4
+e = M-5
+r = M-6
+
+2 = M-7
+3 = M-8
+4 = M-9
+
+j = left
+k = down
+l = up
+; = right
+
+m = home
+, = pagedown
+. = pageup
+/ = end
+
+sysrq = sysrq
+
+### swap layout (space + <key>)
+up = setlayout(enthium)
+down = setlayout(miryoku_enthium)
+
+left = setlayout(qwerty)
+right = setlayout(miryoku_qwerty)
+
+##################### SYMBOL LAYER ########################
+
+[symbol]
+### left hand
+1 = `
+2 = (
+3 = )
+4 = ;
+5 = ,
+
+q = [
+w = {
+e = }
+r = ]
+t = ?
+
+a = ^
+s = =
+d = _
+f = $
+g = *
+
+z = <
+x = |
+c = -
+v = >
+b = !
+
+tab = @
+capslock = `
+leftshift = ~
+leftcontrol = +
+leftmeta = &
+leftalt = %
+space = \
+
+### right hand
+j = backspace
+k = tab
+l = space
+; = enter
+
+m = delete
+
+######################### NUMBER LAYER ############################
+
+
+[number]
+space = 0
+
+### left hand
+a = enter
+s = space
+d = tab
+f = backspace
+
+
+### right hand
+rightalt = %
+
+m = 1
+, = 2
+. = 3
+j = 4
+k = 5
+l = 6
+u = 7
+i = 8
+o = 9
+
+
