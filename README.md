@@ -14,7 +14,7 @@ A set of secure-by-default dotfiles for use with Hyprland on Arch Linux. Include
 ### 🤔 But why?
 *Why make a new set of dotfiles when there are already so many [awesome, practical setups](https://wiki.hyprland.org/Getting-Started/Preconfigured-setups/)?*
 
-**While maintaining simplicity**, the number one goal here is to create an easy-to-setup, intuitive Hyprland desktop experience with a **minimized attack surface BY DEFAULT**. Options to opt-in/install "riskier" conveniences such as an AUR helper are provided. The idea is to have a hardened set of configurations behaving just as smoothly as most other pre-packaged Hyprland setups, allowing end-users to opt-in to more convenience and risk as they deem necessary.
+**While maintaining simplicity**, the number one goal here is to create an easy-to-setup, intuitive Hyprland desktop experience with a *minimal attack surface **BY DEFAULT**.* Options to opt-in/install "riskier" conveniences such as an AUR helper are provided. The idea is to have a hardened set of configurations behaving just as smoothly as most other pre-packaged Hyprland setups, allowing end-users to opt-in to more convenience and risk as they deem necessary.
 
 Please note that I'm not saying that existing pre-configured setups are inherently insecure. It all depends on one's own threat model. However, for the more security-conscious, there are no convenient options that do a reliable job of minimizing bloat.
 
