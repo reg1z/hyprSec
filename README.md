@@ -26,23 +26,22 @@ Many popular pre-packaged setups have some quirks that have been irksome to me, 
 - ML4W uses symbolic link/ GNU stow to implement large portions of its functionality/directory structure. If the end-user had planned on augmenting a pre-configured setup with their own symbolic links and configs, this can drastically complicate things.
 
 
-## Details
-
 ### Goals
 
-- Minimalist. Functionality beyond standard expectations should be opt-in.
+- Minimalist. Functionality beyond standard desktop expectations should be opt-in.
+- Give the user a choice. With default selections, `install.sh` is intended to provide a basic functional Hyprland setup. However, installer prompts should facilitate the installation of "riskier" packages (AUR helper, convenience, bells and whistles, etc...) ONLY if the user consciously opts in.
 - Aside from the optional choice of an AUR helper, **ALL packages** included in the default installation script are sourced from the official Arch repositories.
 - In the installation script, optional selections are opt-out (`[N]o`) by default.
-- Secure-by-default. Default functionality should be implemented using reputable packages. Functionality should be implemented with as few packages as possible.
+- Secure-by-default. Functionality should be implemented using reputable packages where possible. Functionality should be implemented with as few packages as possible.
 - UWSM-managed.
 - Default configuration uses no symbolic links. This gives end-users more agency to personally customize.
-- Similar to EndeavourOS's philosophy, Bluetooth is disabled by default.
+- Similar to the [philosophy of EndeavourOS](https://discovery.endeavouros.com/audio/bluetooth/2021/03/), Bluetooth support is included, but *disabled* by default.
 
 
-### UWSM Quirks
-For these dotfiles, you might want to check out the [systemd startup guide on the Hyprland wiki](https://wiki.hyprland.org/Useful-Utilities/Systemd-start/)
+## UWSM Quirks
+Because this setup uses UWSM, you might want to check out the [systemd startup guide on the Hyprland wiki](https://wiki.hyprland.org/Useful-Utilities/Systemd-start/)
 
-For example, here's an excerpt from the docs on the importance of properly prefacing startup commands within your own custom configurations:
+For example, here's an excerpt from that page on the importance of properly prefacing startup commands within your configs:
 
 > The concept of a session managed by Systemd implies also running applications as units. Uwsm provides a helper to do it. Running applications as child processes inside compositor’s unit is discouraged.
 >
@@ -56,7 +55,7 @@ For example, here's an excerpt from the docs on the importance of properly prefa
 > ```
 
 ## Feedback
-I would love to hear your criticism of this configuration. I'd like to create the smoothest out-of-box Hyprland experience as is possible when reducing.
+I'd love to hear any criticisms you might have. What blindspots am I missing?
 
 ## ‍Credits:
-- Thank you to Stephen Raabe and other contributors of the ML4W dotfiles. The hyprland config files for this setup use a similar topology to ML4W.
+- Thank you to Stephen Raabe and other contributors of the [MyLinuxForWork dotfiles](https://github.com/mylinuxforwork/dotfiles). This configuration has been significantly inspired by ML4W!
