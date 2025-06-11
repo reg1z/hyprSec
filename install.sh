@@ -113,6 +113,10 @@ if gum confirm --default=false "Do you want to install keyd and the Enthium layo
     source ./scripts/keyd/install-keyd.sh
 fi
 
+# Ask if user wants to backup their dotfiles
+if gum confirm --default=false "Do you want to backup your dotfiles?"; then
+    source ./scripts/backup-dotfiles.sh
+fi
 
 # Copy configuration files
 cp -r ./.config/* ~/.config/
