@@ -14,35 +14,30 @@ A set of secure-by-default dotfiles for use with Hyprland on Arch Linux. Include
 ### 🤔 But why?
 *Why make a new set of dotfiles when there are already so many [awesome, practical setups](https://wiki.hyprland.org/Getting-Started/Preconfigured-setups/)?*
 
-**While maintaining simplicity**, the number one goal here is to create an easy-to-setup, intuitive Hyprland desktop experience with a *minimal attack surface **BY DEFAULT**.* Options to opt-in/install "riskier" conveniences such as an AUR helper are provided. The idea is to have a hardened set of configurations behaving just as smoothly as most other pre-packaged Hyprland setups, allowing end-users to opt-in to more convenience and risk as they deem necessary.
+**While maintaining simplicity**, the number one goal here is to create an easy-to-setup, easy-to-customize, intuitive Hyprland desktop experience with a *minimal attack surface **BY DEFAULT**.* Options to opt-in/install "riskier" conveniences such as an AUR helper are provided. The idea is to have a hardened set of configurations behaving just as smoothly as most other pre-packaged Hyprland setups, allowing end-users to opt-in to more convenience and risk as they deem necessary.
 
-Please note that I'm not saying that existing pre-configured setups are inherently insecure. It all depends on one's own threat model. However, for the more security-conscious, there are no convenient options that do a reliable job of minimizing bloat.
+Please note: I'm not saying ALL existing configs out there are inherently insecure. It depends on your threat model. However, there are no options known to me that aim to provide a "feature-complete" Hyprland desktop experience with an emphasis on security.
 
-Popular pre-packaged setups have their own quirks a few (what I consider to be) insecure defaults:
-- They utilize the **Arch User Repository (AUR)** to some extent, including an AUR helper and AUR-sourced packages as part of the default installation. The AUR is not a stable trustworthy source from which to obtain daily-driven software with peace of mind. An AUR helper should be opt-in only (an option is included in the installer).
-- Inclusion of redundant or unnecessary packages.
-- Utilize symbolic links in some form
+Many popular pre-packaged setups have some quirks that have been irksome to me, plus a few (what I consider to be) insecure defaults:
+
+- Security is often sacrificed for aesthetics.
+- Security is often sacrificed for convenience. This is more forgiveable than the first point, but I believe its possible to attain a setup that is just as convenient using official packages to reduce overall risk.
+- Most utilize the **Arch User Repository (AUR)** to some extent, including an AUR helper and AUR-sourced packages by DEFAULT, not giving the user an opportunity to opt-out. The AUR is not a stable trustworthy source of software packages. Packages often abandoned, left to go out-of-date, or change hands between users. It's a convenient option for most, but should remain opt-in only (an option is included in the installer).
+- ML4W uses symbolic link/ GNU stow to implement large portions of its functionality/directory structure. If the end-user had planned on augmenting a pre-configured setup with their own symbolic links and configs, this can drastically complicate things.
 
 
 ## Details
 
 ### Goals
 
-- Aside from the optional choice of an AUR helper, **ALL packages** included in the default installation script are sourced from the official Arch repositories.
-- In the installation script, opt-in `[y]es/[N]o` choices are `[N]o` by default.
-- Secure-by-default. Default functionality should use reputable packages. Functionality should be implemented with as few packages as possible.
 - Minimalist. Functionality beyond standard expectations should be opt-in.
+- Aside from the optional choice of an AUR helper, **ALL packages** included in the default installation script are sourced from the official Arch repositories.
+- In the installation script, optional selections are opt-out (`[N]o`) by default.
+- Secure-by-default. Default functionality should be implemented using reputable packages. Functionality should be implemented with as few packages as possible.
 - UWSM-managed.
-- Uses no symbolic links. This gives the end-user more agency over directory structure.
-- Bluetooth is disabled by default. Must be manually enabled by user.
+- Default configuration uses no symbolic links. This gives end-users more agency to personally customize.
+- Similar to EndeavourOS's philosophy, Bluetooth is disabled by default.
 
-### Project Directory Topology
-
-- The installation script is `install.sh`
-- Most dotfiles are stored under `.config/`
-    - hyprland dotfiles are stored under `.config/hypr/`
-    - waybar dotfiles are stored under `.config/waybar/`
-- Asset files (images, etc.) are stored under `assets/`
 
 ### UWSM Quirks
 For these dotfiles, you might want to check out the [systemd startup guide on the Hyprland wiki](https://wiki.hyprland.org/Useful-Utilities/Systemd-start/)
@@ -59,6 +54,9 @@ For example, here's an excerpt from the docs on the importance of properly prefa
 > exec-once = uwsm app -- mycommand --arg1 --arg2
 > bind = SUPER, E, exec, uwsm app -- pcmanfm-qt.desktop
 > ```
+
+## Feedback
+I would love to hear your criticism of this configuration. I'd like to create the smoothest out-of-box Hyprland experience as is possible when reducing.
 
 ## ‍Credits:
 - Thank you to Stephen Raabe and other contributors of the ML4W dotfiles. The hyprland config files for this setup use a similar topology to ML4W.
