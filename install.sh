@@ -37,6 +37,7 @@ packages=(
     "keyd"
     "pipewire"
     "wireplumber"
+    "playerctl"                 # media player controller
     "qt5-wayland"
     "qt6-wayland"
     "grim"                      # screenshot utility
@@ -118,11 +119,16 @@ if gum confirm --default=false "Do you want to backup your dotfiles?"; then
     source ./scripts/backup-dotfiles.sh
 fi
 
-# Copy configuration files
-cp -r ./.config/* ~/.config/
+# Ask if user wants to delete the contents of ~/.config
+if gum confirm --default=false "Do you want to delete the relevant files in ~/.config?"; then
+    rm -rf ~/.config/hypr
+    rm -rf ~/.config/waybar
+    rm -rf ~/.config/rofi
+    rm -rf ~/.config/mako
+fi
 
-# Copy wallpapers
-cp -r ./assets/wallpapers/ ~/Pictures/wallpapers/
+# Import configuration files and assets
+source ./scripts/import-configs.sh
 
 # enable services
 sudo systemctl --quiet enable --now NetworkManager

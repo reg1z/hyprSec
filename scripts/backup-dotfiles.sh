@@ -6,8 +6,8 @@ set -euo pipefail
 # Create dotfiles-bak directory if it doesn't exist
 mkdir -p ~/dotfiles-bak
 
-# Generate timestamp in YY-MM-DD format
-timestamp=$(date +"%y-%m-%d")
+# Generate timestamp in YY-MM-DD-HH-MM-SS format
+timestamp=$(date +"%y-%m-%d-%H-%M-%S")
 
 # Name of the backup directory
 backup_dir=~/dotfiles-bak/dotconfig_"$timestamp"
