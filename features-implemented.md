@@ -1,27 +1,36 @@
 
 # Roadmap
 
+`- [/]` -> Partially implemented
+`- [-]` -> Implemented, changes being considered
+`- [x]` -> Fully implemented
+
 ## System
 
-- [/] Hyprland Ecosystem
+- [-] Hyprland Ecosystem
     - [x] hyprpaper/wallpaper config
-    - [x] hyprlock
-    - [x] hypridle
-    - [x] hyprcursor
     - [x] hyprpolkitagent
+    - [-] hyprlock
+    - [-] hypridle
+    - [-] hyprcursor
 
 - [/] Networking
-    - [x] firewalld
-    - [x] bluetooth
-    - [x] SSH
-    - [x] networkmanager + applet
+    - [-] firewalld
+    - [-] bluetooth
+    - [-] networkmanager + applet
+    - [-] SSH
 
-- [x] Clipboard
-- [x] Audio and media control (pipewire, wireplumber, playerctl, etc)
-- [/] Screenshots (grim, slurp, and custom script)
-- [/] Notification daemon config
+- [/] Notifications
+    - [-] Notification daemon (currently mako)
+    - [ ] Notification daemon configuration
+
 - [ ] Display Manager config + install (GDM/sddm/etc)
-- [x] File Manager/explorer (thunar)
+    - The script does NOT currently include a display manager by default
+
+- [-] File Manager/explorer (thunar)
+- [-] Clipboard
+- [-] Audio and media control (pipewire, wireplumber, playerctl, etc)
+- [-] Screenshots (grim, slurp, and custom script)
 - [/] Waybar + config
 - [ ] GTK theming
 - [ ] Qt theming
@@ -30,10 +39,8 @@
 ## Misc. Programs
 
 - [/] neovim + config
-- [ ] Qute Browser configuration + installation
 - [/] Media Tools
     - [x] Media Player (vlc, etc)
     - [ ] Photo Editing (GIMP, etc)
     - [ ] Video Editing software (kdenlive, davinci resolve, etc)
-- [ ] 
-- [ ] 
+- [ ] Qute Browser configuration + installation
