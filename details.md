@@ -1,0 +1,2 @@
+- Simple
+- Uses `gum` for script user prompts
