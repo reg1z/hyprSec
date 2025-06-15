@@ -59,4 +59,4 @@ I'd love to hear any criticisms you might have. What blindspots am I missing?
 
 ## ‍Credits:
 - Thank you to Stephen Raabe and other contributors of the [MyLinuxForWork dotfiles](https://github.com/mylinuxforwork/dotfiles). This configuration has been significantly inspired by ML4W!
-- newmanls for their [rofi themes collection](https://github.com/newmanls/rofi-themes-collection/tree/master).
+- w8ste for their [tokyonight rofi theme](https://github.com/w8ste/Tokyonight-rofi-theme)
