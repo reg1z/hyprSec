@@ -88,12 +88,13 @@ gum spin --spinner dot --title "Configuring libvirt socket permissions..." -- \
 gum spin --spinner dot --title "Restarting libvirtd service..." -- \
     systemctl restart libvirtd.service || echo "Could not restart libvirtd service" >&2
 
-echo "QEMU and virt-manager installation completed successfully!"
-
 # Enable NAT connectivity for default network
 if gum confirm "Would you like to enable NAT connectivity for the default libvirt network?"; then
     gum spin --spinner dot --title "Configuring default network for NAT..." -- \
         bash -c '
+        # Set firewall backend to iptables
+        echo "firewall_backend = \"iptables\"" > /etc/libvirt/network.conf
+
         # Ensure the default network is defined
         virsh net-list --all | grep -q "default" || virsh net-create /etc/libvirt/qemu/networks/default.xml
 
@@ -104,6 +105,8 @@ if gum confirm "Would you like to enable NAT connectivity for the default libvir
         virsh net-autostart default
         '
 fi
+
+echo "QEMU and virt-manager installation completed successfully!"
 
 # Provide post-installation guidance
 gum format -- "
