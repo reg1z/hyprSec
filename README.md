@@ -60,4 +60,3 @@ I'd love to hear any criticisms you might have. What blindspots am I missing?
 ## ‍Credits:
 - Thank you to Stephen Raabe and other contributors of the [MyLinuxForWork dotfiles](https://github.com/mylinuxforwork/dotfiles). This configuration has been significantly inspired by ML4W!
 - newmanls for their [rofi themes collection](https://github.com/newmanls/rofi-themes-collection/tree/master).
-- ashish-kus for their [minimal waybar starter configuration](https://github.com/ashish-kus/waybar-minimal).
