@@ -114,6 +114,12 @@ if gum confirm --default=false "Do you want to install qemu-desktop and virt-man
     source ./scripts/install-qemu.sh
 fi
 
+# Ask if user wants to install lazyvim
+if gum confirm --default=false "Do you want to install LazyVim as your Neovim configuration? Config files will be sourced from the Github repo."; then
+    source ./scripts/install-lazyvim.sh
+fi
+
+
 # Ask if user wants to install keyd using gum with a default of no
 if gum confirm --default=false "Do you want to install keyd and the Enthium layout? (only recommended for keyboard enthusiasts)"; then
     source ./scripts/keyd/install-keyd.sh
