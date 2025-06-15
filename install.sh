@@ -109,6 +109,11 @@ If you're unfamiliar with keyd, you will want to skip this.
 
 EOM
 
+# Ask if user wants to install qemu-desktop with virt-manager for the frontend
+if gum confirm --default=false "Do you want to install qemu-desktop and virt-manager, a popular frontend for managing virtual machines?"; then
+    source ./scripts/install-qemu.sh
+fi
+
 # Ask if user wants to install keyd using gum with a default of no
 if gum confirm --default=false "Do you want to install keyd and the Enthium layout? (only recommended for keyboard enthusiasts)"; then
     source ./scripts/keyd/install-keyd.sh
