@@ -125,6 +125,11 @@ if gum confirm --default=false "Do you want to install keyd and the Enthium layo
     source ./scripts/keyd/install-keyd.sh
 fi
 
+# Ask if user wants to install qemu-desktop with virt-manager for the frontend
+if gum confirm --default=false "Do you want to install a terminal multiplexer such as tmux or zellij? Note that installing tmux with this script will currently set you up with my personal tmux configuration."; then
+    source ./scripts/install-tmux.sh
+fi
+
 # Ask if user wants to backup their dotfiles
 if gum confirm --default=false "Do you want to backup your dotfiles?"; then
     source ./scripts/backup-dotfiles.sh
