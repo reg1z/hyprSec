@@ -1,9 +1,12 @@
 
 # Roadmap
 
-`- [/]` -> Partially implemented
-`- [-]` -> Implemented, changes being considered
-`- [x]` -> Fully implemented
+> ### ✅ Checklist Key
+>
+> - `[/]` -> Partially implemented
+> - `[-]` -> Implemented, changes being considered
+> - `[x]` -> Fully implemented
+>
 
 ## System
 
@@ -14,7 +17,7 @@
     - [-] hypridle
     - [-] hyprcursor
 
-- [/] Networking
+- [-] Networking
     - [-] firewalld
     - [-] bluetooth
     - [-] networkmanager + applet
@@ -24,8 +27,7 @@
     - [-] Notification daemon (currently mako)
     - [ ] Notification daemon configuration
 
-- [ ] Display Manager config + install (GDM/sddm/etc)
-    - The script does NOT currently include a display manager by default
+- [-] Display Manager config + install (GDM/sddm/etc)
 
 - [-] File Manager/explorer (thunar)
 - [-] Clipboard
