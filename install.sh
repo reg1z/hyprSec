@@ -73,6 +73,10 @@ sudo pacman -S --needed ${packages[@]}
 #
 # **************************************************************
 
+# Ask if user wants to backup their dotfiles
+if gum confirm --default=false "Do you want to backup your dotfiles?"; then
+    source ./scripts/backup-dotfiles.sh
+fi
 
 # --------------------------------------------------------------
 # Nvidia Drivers
@@ -135,10 +139,6 @@ if gum confirm --default=false "Do you want to install a terminal multiplexer su
     source ./scripts/install-tmux.sh
 fi
 
-# Ask if user wants to backup their dotfiles
-if gum confirm --default=false "Do you want to backup your dotfiles?"; then
-    source ./scripts/backup-dotfiles.sh
-fi
 
 # Ask if user wants to delete the contents of ~/.config
 if gum confirm --default=false "Do you want to delete the relevant files in ~/.config?"; then

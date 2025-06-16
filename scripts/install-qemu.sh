@@ -6,25 +6,11 @@
 
 set -euo pipefail
 
-# Check if gum is installed, if not, offer to install
-if ! command -v gum &> /dev/null; then
-    echo "Gum is not installed. This script requires gum for interactive prompts."
-    if gum confirm "Would you like to install gum from official repositories?"; then
-        sudo pacman -S --noconfirm gum || {
-            echo "Failed to install gum. Please install manually."
-            exit 1
-        }
-    else
-        echo "Cannot proceed without gum. Exiting."
-        exit 1
-    fi
-fi
-
 # Ensure script is run with sudo/root privileges
-if [[ $EUID -ne 0 ]]; then
-   echo "Error: This script must be run with sudo or as root" >&2
-   exit 1
-fi
+#if [[ $EUID -ne 0 ]]; then
+#   echo "Error: This script must be run with sudo or as root" >&2
+#   exit 1
+#fi
 
 # Confirm installation
 if ! gum confirm "This will install QEMU and virt-manager. Proceed?"; then
@@ -34,30 +20,32 @@ fi
 
 # Update package database
 gum spin --spinner dot --title "Updating package database..." -- \
-    pacman -Sy --noconfirm || {
+    sudo pacman -Sy --noconfirm || {
     echo "Failed to update package database" >&2
     exit 1
 }
 
+
+
 # Install core virtualization packages
-gum spin --spinner dot --title "Installing core virtualization packages..." -- \
-    pacman -S --noconfirm \
-    qemu-desktop \
-    libvirt \
-    virt-manager \
-    virt-viewer \
-    dnsmasq \
-    openbsd-netcat \
-    iptables-nft \
-    || {
-    echo "Failed to install virtualization packages" >&2
-    exit 1
+echo 'Installing core virtualization packages...'
+sudo pacman -S \
+  qemu-full \
+  libvirt \
+  virt-manager \
+  virt-viewer \
+  dnsmasq \
+  openbsd-netcat \
+  iptables-nft \
+|| {
+  echo "Failed to install virtualization packages" >&2
+  exit 1
 }
 
 # Optional: Install additional recommended packages
 if gum confirm "Install additional recommended virtualization tools?"; then
     gum spin --spinner dot --title "Installing additional tools..." -- \
-        pacman -S --noconfirm \
+        sudo pacman -S --noconfirm \
         edk2-ovmf \
         bridge-utils \
         || echo "Some optional packages could not be installed" >&2
@@ -65,33 +53,33 @@ fi
 
 # Enable and start libvirtd service
 gum spin --spinner dot --title "Enabling libvirtd service..." -- \
-    systemctl enable libvirtd.service || echo "Could not enable libvirtd service" >&2
+    sudo systemctl enable libvirtd.service || echo "Could not enable libvirtd service" >&2
 
 gum spin --spinner dot --title "Starting libvirtd service..." -- \
-    systemctl start libvirtd.service || echo "Could not start libvirtd service" >&2
+    sudo systemctl start libvirtd.service || echo "Could not start libvirtd service" >&2
 
 # Configure user group for libvirt access
 username=$(gum input --placeholder "Enter username to add to libvirt group")
 if [[ -n "$username" ]]; then
     gum spin --spinner dot --title "Adding user to libvirt group..." -- \
-        usermod -aG libvirt "$username" || echo "Could not add user to libvirt group" >&2
+        sudo usermod -aG libvirt "$username" || echo "Could not add user to libvirt group" >&2
 fi
 
 # Security: Restrict libvirt socket permissions
 gum spin --spinner dot --title "Configuring libvirt socket permissions..." -- \
-    bash -c '
+    sudo bash -c '
     sed -i "s/^#unix_sock_group = \"libvirt\"/unix_sock_group = \"libvirt\"/" /etc/libvirt/libvirtd.conf
     sed -i "s/^#unix_sock_rw_perms = \"0770\"/unix_sock_rw_perms = \"0770\"/" /etc/libvirt/libvirtd.conf
     '
 
 # Restart libvirtd to apply permission changes
 gum spin --spinner dot --title "Restarting libvirtd service..." -- \
-    systemctl restart libvirtd.service || echo "Could not restart libvirtd service" >&2
+    sudo systemctl restart libvirtd.service || echo "Could not restart libvirtd service" >&2
 
 # Enable NAT connectivity for default network
 if gum confirm "Would you like to enable NAT connectivity for the default libvirt network?"; then
     gum spin --spinner dot --title "Configuring default network for NAT..." -- \
-        bash -c '
+        sudo bash -c '
         # Set firewall backend to iptables
         echo "firewall_backend = \"iptables\"" > /etc/libvirt/network.conf
 
@@ -114,5 +102,6 @@ gum format -- "
 - Ensure your user is in the 'libvirt' group
 - Use 'virt-manager' to manage virtual machines
 - Refer to Arch Wiki for advanced virtualization configurations
+
 "
 

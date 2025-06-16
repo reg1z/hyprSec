@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 
 # Arch Wiki information:
 # - The default configuration for sddm can be found at `/usr/lib/sddm/sddm.conf.d/default.conf`
@@ -9,7 +9,7 @@
 # - Previewing themes: `sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/<theme-name>`
 # - Note that SDDM requires these subdirectory names to be the same as the theme names.
 
-pacman -S --needed sddm
+sudo pacman -S --needed sddm
 
 # Copy sddm configuration
 cp -f sddm/sddm.conf /etc/sddm.conf.d/sddm.conf
@@ -18,9 +18,9 @@ cp -f sddm/sddm.conf /etc/sddm.conf.d/sddm.conf
 cp -rf sddm/themes/reactionary /usr/share/sddm/themes/
 
 # Enable sddm service
-systemctl enable sddm.service
+sudo systemctl enable sddm.service
 
 # Start sddm service
-systemctl start sddm
+sudo systemctl start sddm
 
 echo "SDDM installed and enabled. Please reboot or log out to see the changes."
