@@ -12,10 +12,10 @@
 pacman -S --needed sddm
 
 # Copy sddm configuration
-cp -f ../sddm/sddm.conf /etc/sddm.conf.d/sddm.conf
+cp -f sddm/sddm.conf /etc/sddm.conf.d/sddm.conf
 
 # Copy sddm reactionary theme
-cp -rf ../sddm/themes/reactionary /usr/share/sddm/themes/
+cp -rf sddm/themes/reactionary /usr/share/sddm/themes/
 
 # Enable sddm service
 systemctl enable sddm.service
