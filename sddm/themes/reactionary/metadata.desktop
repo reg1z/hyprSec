@@ -1,0 +1,17 @@
+[SddmGreeterTheme]
+Name=Reactionary
+Description=Reactionary
+Author=Mark Whittaker
+Copyright=
+License=GPLv3
+Type=sddm-theme
+Version=2.5
+Website=https://www.pling.com/u/phob1an/
+Screenshot=preview.png
+MainScript=Main.qml
+ConfigFile=theme.conf
+TranslationsDirectory=translations
+Email=phobian@tutanota.com
+Theme-Id=reactionary
+Theme-API=2.0
+QtVersion=6
