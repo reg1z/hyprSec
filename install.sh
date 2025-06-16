@@ -119,6 +119,11 @@ if gum confirm --default=false "Do you want to install LazyVim as your Neovim co
     source ./scripts/install-lazyvim.sh
 fi
 
+# Ask if user wants to install sddm
+if gum confirm --default=false "Do you want to install sddm as your display manager? If not, you'll just have the default tty shell at login."; then
+    source ./scripts/install-sddm.sh
+fi
+
 
 # Ask if user wants to install keyd using gum with a default of no
 if gum confirm --default=false "Do you want to install keyd and the Enthium layout? (only recommended for keyboard enthusiasts)"; then
