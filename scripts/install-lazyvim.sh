@@ -1,10 +1,10 @@
 #!/bin/bash
 
-mkdir -p ~/.config/nvim
+mkdir -p $USER_HOME/.config/nvim
 
 # Clone the LazyVim starter configuration
-git clone https://github.com/LazyVim/starter ~/.config/nvim
-rm -rf ~/.config/nvim/.git
+git clone https://github.com/LazyVim/starter $USER_HOME/.config/nvim
+rm -rf $USER_HOME/.config/nvim/.git
 
 # Headlessly install the LazyVim plugins
 nvim --headless "+Lazy! sync" +qa

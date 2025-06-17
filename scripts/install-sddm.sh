@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 # Arch Wiki information:
 # - The default configuration for sddm can be found at `/usr/lib/sddm/sddm.conf.d/default.conf`
@@ -12,10 +12,10 @@
 sudo pacman -S --needed sddm
 
 # Copy sddm configuration
-cp -f sddm/sddm.conf /etc/sddm.conf.d/sddm.conf
+sudo cp -f sddm/sddm.conf /etc/sddm.conf.d/sddm.conf
 
 # Copy sddm reactionary theme
-cp -rf sddm/themes/reactionary /usr/share/sddm/themes/
+sudo cp -rf sddm/themes/reactionary /usr/share/sddm/themes/
 
 # Enable sddm service
 sudo systemctl enable sddm.service
