@@ -1,4 +1,8 @@
 #!/bin/bash
+
+USER_HOME=$(eval echo "~${SUDO_USER:-$USER}")
+CURRENT_USER=$(whoami)
+
 mkdir -p $USER_HOME/.config/hypr
 mkdir -p $USER_HOME/.config/waybar
 mkdir -p $USER_HOME/.config/rofi
