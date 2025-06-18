@@ -2,7 +2,6 @@
 # TO WORKAROUND THIS, YOU CAN CREATE A .bashrc_custom FILE IN YOUR HOME DIRECTORY.
 # If it exists, .bashrc_custom will be loaded at the end of this file
 
-
 # -----------------------------------------------------
 # Aliases
 # -----------------------------------------------------
@@ -13,14 +12,14 @@ alias ls="ls --color=auto"
 # Git
 alias gs="git status"
 alias ga="git add"
-alias gc="git commit"
+alias gc="git commit -m"
 alias gp="git push"
-
 
 # -----------------------------------------------------
 # Load .bashrc_custom (if exists)
 # -----------------------------------------------------
 
 if [ -f ~/.bashrc_custom ]; then
-    source ~/.bashrc_custom
+  source ~/.bashrc_custom
 fi
+
