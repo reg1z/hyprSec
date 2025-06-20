@@ -35,6 +35,24 @@
   - [ ] notfication daemon integration
   - [ ] current workspace focus indicator
 
+
+### Keyboard
+
+- [ ] Layout Selection
+
+#### Hyprland Keymaps
+
+- [ ] QWERTY (default) layout
+  - [ ] Set of common standard keybinds. Include all functionality enabled in the enthium-style layout (but for normies).
+
+- [-] Enthium Layout
+Refine current layout. The current layout is made with the enthium KB layout in mind.
+  - [-] Drop-in: Terminals. 3-4 special workspaces for simple on-demand screen space / managing terminal sprawl
+  - [x] Drop-in: Dictionary/Thesaurus. Special workspace that opens a browser window immediately on the OneLook reverse dictionary page.
+    - [?] Make this a locally-installed solution?
+  - [?] Drop-in: Virtual Machine workspace. Special workspace(s) for 1-3 VMs that have VM passthru submappings automatically enabled when activated. Pressing the binding again within this special workspace will drop-out the VM and re-enable the primary keymap (disable passthru).
+
+
 ### Tools
 - [-] Terminal Stuff
   - [ ] Script for selection of preferred terminal EMULATOR (default: kitty)
@@ -86,44 +104,41 @@
   - [ ] Photo Editing (GIMP, etc)
   - [ ] Video Editing software (kdenlive, davinci resolve, etc)
 
+- [ ] Locally-hosted (on-device) speech-to-text implementation.
+  - [?] Via a faster-whisper integration, or something else?
+  - [ ] To clipboard
+  - [ ] To text input currently in-focus
+
 ### Editors
 
-- [-] Neovim
-  - [x] vanilla installation
-  - Optional script for selection of popular nvim pre-configurations
-    - [-] LazyVim
-    - [ ] nvchad
-    - [ ] AstroNvim
-    - [ ] LunarVim
-    - [ ] ???
+- [-] Neovim / Vim / Vi
+  - [ ] Optional basic `.vimrc` with best-practice configs compatible w/ both vim & nvim
+  - [-] Neovim
+    - [x] vanilla installation
+    - Optional script for selection of popular nvim pre-configurations
+      - [-] LazyVim
+      - [ ] nvchad
+      - [ ] AstroNvim
+      - [ ] LunarVim
+      - [ ] ???
+  - [ ] Vim
+  - [ ] Vi
 
-- [ ] VSCode + its popular works
+- [ ] VSCode + its popular forks
   - [ ] code / vs codium
   - [?] Cursor
   - [ ] ???
 
-### Keyboard
-
-- [ ] Layout Selection
-
-#### Hyprland Keymaps
-
-- [ ] QWERTY (default) layout
-  - [ ] Set of common standard keybinds. Include all functionality enabled in the enthium-style layout (but for normies).
-
-- [-] Enthium Layout
-Refine current layout. The current layout is made with the enthium KB layout in mind.
-  - [-] Drop-in: Terminals. 3-4 special workspaces for simple on-demand screen space / managing terminal sprawl
-  - [x] Drop-in: Dictionary/Thesaurus. Special workspace that opens a browser window immediately on the OneLook reverse dictionary page.
-    - [?] Make this a locally-installed solution?
-  - [?] Drop-in: Virtual Machine workspace. Special workspace(s) for 1-3 VMs that have VM passthru submappings automatically enabled when activated. Pressing the binding again within this special workspace will drop-out the VM and re-enable the primary keymap (disable passthru).
 
 ## Misc
 
+### Virtualization
 
-- [ ] Script to install a locally-hosted (on-device) speech-to-text implementation.
-  - [ ] To clipboard
-  - [ ] To text input currently in-focus
+- [x] KVM + QEMU + virt-manager
+- [ ] Virtualbox
+
+
+### Programming Languages
 
 - [ ] NodeJS / npm installation script
   - [?] npm/pnpm/yarn/etc
@@ -140,3 +155,10 @@ Refine current layout. The current layout is made with the enthium KB layout in 
   - [ ] Flatpak
   - [?] AppImage support that is more convenient.
     - Something like: Download AppImage -> set required perms -> put in "AppImage/" directory -> this would do the equivalent of adding a .desktop file and making the AppImage itself accessible from `$PATH`/terminal.
+
+### Communications / Messengers
+
+- [ ] Choice of matrix client
+- [ ] Discord
+- [ ] Signal
+
