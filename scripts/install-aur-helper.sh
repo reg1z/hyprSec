@@ -1,5 +1,9 @@
 #!/bin/bash
 
+SCRIPTS="scripts"
+USER_HOME=$(eval echo "~${SUDO_USER:-$USER}")
+CURRENT_USER=$(whoami)
+
 # Create a directory for cloned aur package repos.
 mkdir -p $USER_HOME/aur
 cd /home/$USER_HOME/aur

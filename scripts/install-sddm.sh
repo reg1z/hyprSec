@@ -1,5 +1,9 @@
 #!/bin/bash
 
+SCRIPTS="scripts"
+USER_HOME=$(eval echo "~${SUDO_USER:-$USER}")
+CURRENT_USER=$(whoami)
+
 # Arch Wiki information:
 # - The default configuration for sddm can be found at `/usr/lib/sddm/sddm.conf.d/default.conf`
 # - For changes, create new file(s) in `/etc/sddm.conf.d/`

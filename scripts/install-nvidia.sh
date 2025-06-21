@@ -1,13 +1,16 @@
 #!/bin/bash
+
+SCRIPTS="scripts"
+USER_HOME=$(eval echo "~${SUDO_USER:-$USER}")
+CURRENT_USER=$(whoami)
+
 set -euo pipefail
 
 # Get the current running kernel
 kernel_version="$(uname -r)"
 
-
-
 # Display detected kernel version and recommend nvidia driver
-cat << EOM
+cat <<EOM
 
 !!! ---IMPORTANT:---
 !!! Packages named with "open" are the open-source drivers. They are not recommended.
@@ -28,7 +31,7 @@ DETECTED KERNEL VERSION: $kernel_version
 EOM
 
 # Ask if user wants to install nvidia drivers
-choice=$(gum choose --header="Select the nvidia driver to install" "nvidia-dkms" "nvidia-lts" "nvidia" "nvidia-open-dkms" "nvidia-open-lts" "nvidia-open") 
+choice=$(gum choose --header="Select the nvidia driver to install" "nvidia-dkms" "nvidia-lts" "nvidia" "nvidia-open-dkms" "nvidia-open-lts" "nvidia-open")
 
 echo "Proceeding with NVIDIA driver installation using $choice"
 

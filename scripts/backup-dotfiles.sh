@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+SCRIPTS="scripts"
+USER_HOME=$(eval echo "~${SUDO_USER:-$USER}")
+CURRENT_USER=$(whoami)
+
 # Backup .config directory with timestamp
 set -euo pipefail
 
@@ -22,4 +26,3 @@ cp -r $USER_HOME/.config "$backup_dir"
 cp -f $USER_HOME/.*profile $USER_HOME/.*rc "$backup_dir" 2>/dev/null || true
 
 echo "Dotfiles backed up to $backup_dir"
-

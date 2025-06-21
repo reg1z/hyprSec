@@ -1,5 +1,9 @@
 #!/bin/bash
 
+SCRIPTS="scripts"
+USER_HOME=$(eval echo "~${SUDO_USER:-$USER}")
+CURRENT_USER=$(whoami)
+
 mkdir -p $USER_HOME/.config/nvim
 
 # Clone the LazyVim starter configuration
