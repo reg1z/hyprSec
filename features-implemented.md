@@ -35,6 +35,11 @@
   - [ ] notfication daemon integration
   - [ ] current workspace focus indicator
 
+### User Experience
+
+- [ ] Keybinding cheatsheet/shortcut menu. Similar/corresponding to the rofi implementation ML4W uses.
+  - [ ] Able to parse hyprland bind flags. See [the hyprland wiki page](https://wiki.hypr.land/Configuring/Binds/#bind-flags) for details.
+
 
 ### Keyboard
 
