@@ -35,4 +35,4 @@ choice=$(gum choose --header="Select the nvidia driver to install" "nvidia-dkms"
 
 echo "Proceeding with NVIDIA driver installation using $choice"
 
-sudo pacman -S --needed $choice
+sudo pacman -S --needed $choice --noconfirm

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install spice-vdagent and qemu-guest-agent
-sudo pacman --needed -S spice-vdagent qemu-guest-agent
+sudo pacman --needed -S spice-vdagent qemu-guest-agent --noconfirm
 
 # Enable and start the services
 sudo systemctl enable spice-vdagentd.service

@@ -2,7 +2,7 @@
 #set -euo pipefail
 
 # Install tmux
-sudo pacman -S tmux
+sudo pacman -S tmux --noconfirm
 
 # Import tmux configuration
 cp -rf home/.tmux.conf $USER_HOME/.tmux.conf

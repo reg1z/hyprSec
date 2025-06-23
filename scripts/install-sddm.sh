@@ -13,7 +13,7 @@ CURRENT_USER=$(whoami)
 # - Previewing themes: `sddm-greeter-qt6 --test-mode --theme /usr/share/sddm/themes/<theme-name>`
 # - Note that SDDM requires these subdirectory names to be the same as the theme names.
 
-sudo pacman -S --needed sddm
+sudo pacman -S --needed sddm sddm-kcm --noconfirm
 
 # Copy sddm configuration
 sudo cp -f sddm/sddm.conf /etc/sddm.conf.d/sddm.conf
