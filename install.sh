@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # Exit on error
 #set -e
 
@@ -67,6 +68,19 @@ mkdir -p $USER_HOME/.config/mako
 
 # Install required packages
 sudo pacman -S --needed ${packages[@]}
+
+
+# ASCII art
+gum style --foreground="#E23737" --bold <<EOM
+Welcome to...
+ _                      ____            
+| |__  _   _ _ __  _ __/ ___|  ___  ___ 
+| '_ \| | | | '_ \| '__\___ \ / _ \/ __|
+| | | | |_| | |_) | |   ___) |  __/ (__ 
+|_| |_|\__, | .__/|_|  |____/ \___|\___|
+       |___/|_|    
+EOM
+
 
 # **************************************************************
 # USER CHOICES
@@ -179,6 +193,21 @@ if gum confirm --default=false "Do you want to install and enable the BlackArch 
   source $SCRIPTS/blackarch/install-blackarch.sh
 fi
 
+# Explain spice-vdagent and qemu-guest-agent
+cat <<EOM
+
+spice-vdagent and qemu-guest-agent are services intended for
+guest virtual machines. They are required for certain features
+in QEMU/SPICE, such as clipboard sharing, automatic desktop resizing, and more.
+
+(!) Only do this if you're sure you're in a virtual machine.
+
+EOM
+# Ask if user wants to install spice-vdagent and qemu-guest-agent
+if gum confirm --default=false "Is your Arch installation in a virtual machine? If so, do you want to install and enable spice-vdagent and qemu-guest-agent?"; then
+  source $SCRIPTS/install-spicevd-qemu-agent.sh
+fi
+
 # Import configuration files and assets
 source $SCRIPTS/import-configs.sh
 
@@ -187,4 +216,4 @@ sudo systemctl --quiet enable --now NetworkManager
 sudo systemctl --quiet enable --now firewalld
 sudo systemctl --quiet enable --now power-profiles-daemon
 
-echo "Installation complete! Please log out and log back in to start using Hyprland."
+echo "Installation complete! A reboot is recommended. You can now launch Hyprland."
