@@ -173,15 +173,17 @@ cat <<EOM
 BlackArch is an Arch-based Linux distribution intended
 for penetration testers and cybersecurity enthusiasts.
 
-Answering yes will enable access to the BlackArch repositories via pacman.
-It will not change any pre-existing desktop configurations.
+Answering "YES" will:
+    - Enable access to the BlackArch repositories via pacman.
+    - Install standard packages and security tools included in BlackArch.
+    - It will NOT change any pre-existing desktop configurations.
 
 (!) Only do this if you know what you're doing.
 
 EOM
 
 # Ask if user wants to install the BlackArch Pentisting Distribution Repositories
-if gum confirm --default=false "Do you want to install and enable the BlackArch repositories?"; then
+if gum confirm --default=false "Do you want to install BlackArch?"; then
   source $SCRIPTS/blackarch/install-blackarch.sh
 fi
 
@@ -203,6 +205,11 @@ fi
 # Ask if user wants to install sddm
 if gum confirm --default=false "Do you want to install sddm as your display manager? If not, you'll just have the default tty shell at login."; then
   source $SCRIPTS/install-sddm.sh
+fi
+
+# Ask for the user's $SHELL of choice
+if gum confirm --default=false 'Which $SHELL do you prefer?'; then
+  source $SCRIPTS/set-shell.sh
 fi
 
 # Import configuration files and assets
