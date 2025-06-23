@@ -61,3 +61,4 @@ I'd love to hear any criticisms you might have. What blindspots am I missing?
 - Thank you to Stephen Raabe and other contributors of the [MyLinuxForWork dotfiles](https://github.com/mylinuxforwork/dotfiles). This configuration has been significantly inspired by ML4W!
 - w8ste for their [tokyonight rofi theme](https://github.com/w8ste/Tokyonight-rofi-theme)
 - phob1an for their [set of Reactionary Qt themes](https://www.opencode.net/phob1an/reactionary). Their SDDM theme is currently used in this config's sddm installation script.
+- Joël K.for the [Future Cyan Hyprcursor Theme](https://gitlab.com/Pummelfisch/future-cyan-hyprcursor)

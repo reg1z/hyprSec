@@ -114,6 +114,9 @@ Refine current layout. The current layout is made with the enthium KB layout in 
   - [ ] To clipboard
   - [ ] To text input currently in-focus
 
+
+- [ ] Emoji Selector
+
 ### Editors
 
 - [-] Neovim / Vim / Vi
@@ -136,6 +139,7 @@ Refine current layout. The current layout is made with the enthium KB layout in 
 
 
 ## Misc
+
 
 ### Virtualization
 
