@@ -21,7 +21,7 @@ sudo mkdir -p /etc/sddm.conf.d
 sudo cp -f assets/sddm/sddm.conf /etc/sddm.conf.d/sddm.conf
 
 # Copy sddm reactionary theme
-sudo cp -rf sddm/themes/reactionary /usr/share/sddm/themes/
+sudo cp -rf assets/sddm/themes/reactionary /usr/share/sddm/themes/
 
 # Enable sddm service
 sudo systemctl enable sddm.service
