@@ -27,7 +27,7 @@ autoload -Uz compinit && compinit
 # -----------------------------------------------------
 
 # System
-alias ls="ls --color=auto -lha"
+alias ls="ls --color=auto -ha"
 alias grep="grep --color=auto"
 
 # Git
