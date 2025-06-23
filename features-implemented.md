@@ -167,3 +167,6 @@ Refine current layout. The current layout is made with the enthium KB layout in 
 - [ ] Discord
 - [ ] Signal
 
+### Third Party Repositories / Distros
+
+- [x] BlackArch optional script (Arch-based pentesting distro)
