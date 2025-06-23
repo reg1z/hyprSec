@@ -15,8 +15,10 @@ CURRENT_USER=$(whoami)
 
 sudo pacman -S --needed sddm sddm-kcm --noconfirm
 
+sudo mkdir -p /etc/sddm.conf.d
+
 # Copy sddm configuration
-sudo cp -f sddm/sddm.conf /etc/sddm.conf.d/sddm.conf
+sudo cp -f assets/sddm/sddm.conf /etc/sddm.conf.d/sddm.conf
 
 # Copy sddm reactionary theme
 sudo cp -rf sddm/themes/reactionary /usr/share/sddm/themes/
