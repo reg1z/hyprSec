@@ -7,12 +7,13 @@
 # -----------------------------------------------------
 
 # System
-alias ls="ls --color=auto"
+alias ls="ls --color=auto -lha"
+alias grep="grep --color=auto"
 
 # Git
 alias gs="git status"
 alias ga="git add"
-alias gc="git commit -m"
+alias gc="git commit"
 alias gp="git push"
 
 # -----------------------------------------------------
@@ -22,4 +23,3 @@ alias gp="git push"
 if [ -f ~/.bashrc_custom ]; then
   source ~/.bashrc_custom
 fi
-

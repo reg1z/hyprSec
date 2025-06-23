@@ -4,8 +4,8 @@
 
 
 # History Settings
-export HISTSIZE=10000
-export SAVEHIST=10000
+export HISTSIZE=500
+export SAVEHIST=500
 export HISTFILE=~/.zsh_history
 
 # Misc Options
@@ -27,13 +27,13 @@ autoload -Uz compinit && compinit
 # -----------------------------------------------------
 
 # System
-alias ls="ls -ha --color=auto"
-alias grep='grep --color=auto'
+alias ls="ls --color=auto -lha"
+alias grep="grep --color=auto"
 
 # Git
 alias gs="git status"
 alias ga="git add"
-alias gc="git commit -m"
+alias gc="git commit"
 alias gp="git push"
 
 # -----------------------------------------------------
