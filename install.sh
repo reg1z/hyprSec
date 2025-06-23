@@ -38,7 +38,6 @@ packages=(
   "waybar"
   "rofi-wayland" # application launcher
   "mako"         # notification daemon
-  "keyd"
   "pipewire"
   "wireplumber"
   "playerctl" # media player controller
@@ -108,6 +107,36 @@ if gum confirm --default=false "Do you want to install an AUR helper (yay/paru)?
 fi
 
 # --------------------------------------------------------------
+# Virtualization
+# --------------------------------------------------------------
+
+# Ask if user wants to install qemu-desktop with virt-manager for the frontend
+if gum confirm --default=false "Do you want to install qemu and virt-manager, a popular frontend for managing virtual machines?"; then
+  source $SCRIPTS/install-qemu.sh
+fi
+
+# Ask if user wants to install docker from the official docker repositories
+# ...
+
+# --------------------------------------------------------------
+# vim
+# --------------------------------------------------------------
+
+# Ask if user wants to install neovim
+if gum confirm --default=false "Do you want to install neovim?"; then
+  source $SCRIPTS/install-nvim.sh
+fi
+
+# --------------------------------------------------------------
+# Display Manager
+# --------------------------------------------------------------
+
+# Ask if user wants to install sddm
+if gum confirm --default=false "Do you want to install sddm as your display manager? If not, you'll just have the default tty shell at login."; then
+  source $SCRIPTS/install-sddm.sh
+fi
+
+# --------------------------------------------------------------
 # Keyboard
 # --------------------------------------------------------------
 
@@ -122,29 +151,32 @@ If you're unfamiliar with keyd, you will want to skip this.
 
 EOM
 
-# Ask if user wants to install qemu-desktop with virt-manager for the frontend
-if gum confirm --default=false "Do you want to install qemu-desktop and virt-manager, a popular frontend for managing virtual machines?"; then
-  source $SCRIPTS/install-qemu.sh
-fi
-
-# Ask if user wants to install neovim
-if gum confirm --default=false "Do you want to install neovim?"; then
-  source $SCRIPTS/install-nvim.sh
-fi
-
-# Ask if user wants to install sddm
-if gum confirm --default=false "Do you want to install sddm as your display manager? If not, you'll just have the default tty shell at login."; then
-  source $SCRIPTS/install-sddm.sh
-fi
-
-# Ask if user wants to install keyd using gum with a default of no
+# Ask if user wants to install keyd
 if gum confirm --default=false "Do you want to install keyd and the Enthium layout? (only recommended for keyboard enthusiasts)"; then
   source $SCRIPTS/keyd/install-keyd.sh
 fi
 
-# Ask if user wants to install qemu-desktop with virt-manager for the frontend
-if gum confirm --default=false "Do you want to install a terminal multiplexer such as tmux or zellij? Note that installing tmux with this script will currently set you up with my personal tmux configuration."; then
+# Ask if user wants to install tmux
+if gum confirm --default=false "Do you want to install tmux? Note that installing tmux with this script will currently set you up with a non-default tmux configuration."; then
   source $SCRIPTS/install-tmux.sh
+fi
+
+# Explain BlackArch
+cat <<EOM
+
+BlackArch is an Arch-based Linux distribution intended
+for penetration testers and cybersecurity enthusiasts.
+
+Answering yes will enable access to the BlackArch repositories via pacman.
+It will not change any pre-existing desktop configurations.
+
+(!) Only do this if you know what you're doing.
+
+EOM
+
+# Ask if user wants to install the BlackArch Pentisting Distribution Repositories
+if gum confirm --default=false "Do you want to install and enable the BlackArch repositories?"; then
+  source $SCRIPTS/blackarch/install-blackarch.sh
 fi
 
 # Import configuration files and assets
