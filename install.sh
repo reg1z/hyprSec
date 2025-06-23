@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # Exit on error
 #set -e
 
@@ -69,7 +68,6 @@ mkdir -p $USER_HOME/.config/mako
 # Install required packages
 sudo pacman -S --needed ${packages[@]}
 
-
 # ASCII art
 gum style --foreground="#E23737" --bold <<EOM
 Welcome to...
@@ -80,7 +78,6 @@ Welcome to...
 |_| |_|\__, | .__/|_|  |____/ \___|\___|
        |___/|_|    
 EOM
-
 
 # **************************************************************
 # USER CHOICES
@@ -145,11 +142,6 @@ fi
 # Display Manager
 # --------------------------------------------------------------
 
-# Ask if user wants to install sddm
-if gum confirm --default=false "Do you want to install sddm as your display manager? If not, you'll just have the default tty shell at login."; then
-  source $SCRIPTS/install-sddm.sh
-fi
-
 # --------------------------------------------------------------
 # Keyboard
 # --------------------------------------------------------------
@@ -206,6 +198,11 @@ EOM
 # Ask if user wants to install spice-vdagent and qemu-guest-agent
 if gum confirm --default=false "Is your Arch installation in a virtual machine? If so, do you want to install and enable spice-vdagent and qemu-guest-agent?"; then
   source $SCRIPTS/install-spicevd-qemu-agent.sh
+fi
+
+# Ask if user wants to install sddm
+if gum confirm --default=false "Do you want to install sddm as your display manager? If not, you'll just have the default tty shell at login."; then
+  source $SCRIPTS/install-sddm.sh
 fi
 
 # Import configuration files and assets

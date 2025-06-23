@@ -24,7 +24,4 @@ sudo cp -rf sddm/themes/reactionary /usr/share/sddm/themes/
 # Enable sddm service
 sudo systemctl enable sddm.service
 
-# Start sddm service
-sudo systemctl start sddm
-
 echo "SDDM installed and enabled. Please reboot or log out to see the changes."
