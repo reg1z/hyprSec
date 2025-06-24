@@ -121,7 +121,7 @@ l = timeout(l, 185, layer(alt))
 - = [
 = = ]
 
-capslock = b
+capslock = q
 
 leftalt = timeout(esc, 150, layer(alt))
 rightalt = timeout(r, 150, layer(symbol))
@@ -129,7 +129,7 @@ rightalt = timeout(r, 150, layer(symbol))
 rightshift = rightshift
 rightcontrol = rightcontrol
 
-q = q
+q = b
 w = y
 e = o
 r = u
@@ -140,7 +140,7 @@ y = x
 u = l
 i = d
 o = w
-p = z
+p = v
 [ = leftalt
 ] = rightalt
 
@@ -156,7 +156,7 @@ j = h
 k = t
 l = n
 ; = s
-' = v
+' = z
 
 z = '
 x = -
@@ -184,9 +184,9 @@ rightalt = timeout(r, 150, layer(symbol))
 rightshift = rightshift
 rightcontrol = rightcontrol
 
-capslock = b
+capslock = q
 
-q = q
+q = b
 w = y
 e = o
 r = u
@@ -197,7 +197,7 @@ y = x
 u = l
 i = d
 o = w
-p = z
+p = v
 [ = leftalt
 ] = rightalt
 
@@ -213,7 +213,7 @@ j = timeout(h, 120, layer(shift))
 k = timeout(t, 150, layer(control))
 l = timeout(n, 185, layer(alt))
 ; = timeout(s, 185, layer(meta))
-' = v
+' = z
 
 z = '
 x = -
