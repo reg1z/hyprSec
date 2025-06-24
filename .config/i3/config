@@ -1,0 +1,75 @@
+# i3 config file (v4)
+#
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+
+set $mod Mod4
+set $alt Mod1
+
+# ---------------------------------
+# Variable Settings
+# ---------------------------------
+
+font pango:Terminess Nerd Font Mono bold 14
+
+# when repeating the same "switch-to-workspace" hotkey, switch back to the last focused workspace
+workspace_auto_back_and_forth yes
+
+# Display urgent notification on windows
+force_display_urgency_hint 500 ms
+
+
+# ---------------------------------
+# AUTOSTART
+# ---------------------------------
+
+# Start XDG autostart .desktop files using dex. See also
+# https://wiki.archlinux.org/index.php/XDG_Autostart
+exec --no-startup-id dex --autostart --environment i3
+
+# The combination of xss-lock, nm-applet and pactl is a popular choice, so
+# they are included here as an example. Modify as you see fit.
+
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# screen before suspend. Use loginctl lock-session to lock your screen.
+set $black0 000000
+set $Locker i3lock -d -c $black0 -f
+exec --no-startup-id xss-lock --transfer-sleep-lock -- $Locker
+
+# NetworkManager is the most popular way to manage wireless networks on Linux,
+# and nm-applet is a desktop environment-independent system tray GUI for it.
+exec --no-startup-id nm-applet
+
+# i3 autotiling for bspwm-like tiling
+exec_always --no-startup-id autotiling --limit 2
+
+# Set desktop background color to solid black
+exec --no-startup-id xsetroot -solid "#000000"
+
+
+# ---------------------------------
+# Include Other Config Files...
+# ---------------------------------
+
+# System Keybinds
+include ~/.config/i3/i3-system-binds.conf
+
+# App Keybinds
+include ~/.config/i3/i3-app-binds.conf
+
+# Scratchpads
+include ~/.config/i3/i3-scratchpads.conf
+
+# Theming
+include ~/.config/i3/i3-theme.conf
+
+# Status Bar
+include ~/.config/i3/i3-bar.conf
+
+# i3 Gaps
+include ~/.config/i3/i3-gaps.conf
+
+# i3 bar
+bar {
+    position top
+    status_command i3status
+}

@@ -212,6 +212,11 @@ if gum confirm --default=false 'Which $SHELL do you prefer?'; then
   source $SCRIPTS/set-shell.sh
 fi
 
+# Ask for the user's $SHELL of choice
+if gum confirm --default=false 'Would you like to install the i3 tiling window manager? (stable X11 hyprland alternative/backup environment)'; then
+  source $SCRIPTS/i3/install-i3.sh
+fi
+
 # Import configuration files and assets
 source $SCRIPTS/import-configs.sh
 
