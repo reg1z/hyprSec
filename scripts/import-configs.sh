@@ -18,8 +18,6 @@ cp -rf --remove-destination .config/mako/* $USER_HOME/.config/mako
 cp -rf --remove-destination .config/kitty/* $USER_HOME/.config/kitty
 cp -f home/.* $USER_HOME/
 
-source $SCRIPTS/i3/import-i3-configs.sh
-
 # Copy wallpapers to ~/Pictures/wallpapers/
 mkdir -p $USER_HOME/Pictures/wallpapers
 cp -rf assets/wallpapers/* $USER_HOME/Pictures/wallpapers/
