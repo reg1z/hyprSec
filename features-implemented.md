@@ -161,7 +161,7 @@ Refine current layout. The current layout is made with the enthium KB layout in 
   - [ ] ???
 
 - [ ] Misc. scripts / support for linux packaging types in a way that is more user-friendly
-  - [ ] Flatpak
+  - [x] Flatpak
   - [?] AppImage support that is more convenient.
     - Something like: Download AppImage -> set required perms -> put in "AppImage/" directory -> this would do the equivalent of adding a .desktop file and making the AppImage itself accessible from `$PATH`/terminal.
 
