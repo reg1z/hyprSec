@@ -6,15 +6,23 @@
 # Aliases
 # -----------------------------------------------------
 
-# System
+# Colorize some standard commands
 alias ls="ls --color=auto -ha"
 alias grep="grep --color=auto"
+alias pacman="pacman --color=auto"
+alias yay="yay --color=auto"
+alias paru="paru --color=auto"
+alias diff="diff --color=auto"
+alias ip="ip --color=auto"
 
-# Git
+# Git short-hands
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit"
 alias gp="git push"
+
+# GhostScript replacement alias for "gs"
+alias gscrpt="exec /usr/bin/gs"
 
 # -----------------------------------------------------
 # Load .bashrc_custom (if exists)
