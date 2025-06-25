@@ -204,12 +204,14 @@ fi
 
 # Ask if user wants to install sddm
 if gum confirm --default=false "Do you want to install sddm as your display manager? If not, you'll just have the default tty shell at login."; then
-  source $SCRIPTS/install-sddm.sh
+  source $SCRIPTS/sddm/install-sddm.sh
 fi
 
 # Ask for the user's $SHELL of choice
-if gum confirm --default=false 'Which $SHELL do you prefer?'; then
-  source $SCRIPTS/set-shell.sh
+source $SCRIPTS/set-shell.sh
+
+if gum confirm --default=false "Would you like to install flatpak? This is required for installing applications from flathub."; then
+  source $SCRIPTS/install-flatpak.sh
 fi
 
 # Ask for the user's $SHELL of choice
