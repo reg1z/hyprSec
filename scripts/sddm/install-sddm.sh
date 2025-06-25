@@ -15,13 +15,7 @@ CURRENT_USER=$(whoami)
 
 sudo pacman -S --needed sddm sddm-kcm --noconfirm
 
-sudo mkdir -p /etc/sddm.conf.d
-
-# Copy sddm configuration
-sudo cp -f assets/sddm/sddm.conf /etc/sddm.conf.d/sddm.conf
-
-# Copy sddm reactionary theme
-sudo cp -rf assets/sddm/themes/reactionary /usr/share/sddm/themes/
+source ./import-sddm-configs.sh
 
 # Enable sddm service
 sudo systemctl enable sddm.service
