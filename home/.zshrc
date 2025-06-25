@@ -12,11 +12,13 @@ export HISTFILE=~/.zsh_history
 setopt appendhistory autocd extendedglob nomatch
 
 # vi mode
+export KEYTIMEOUT=1 # Make vi mode not laggy
 bindkey -v
+bindkey '^?' backward-delete-char   # make backspace work
 
 # Prompt Theme
 autoload -Uz promptinit && promptinit
-prompt adam2
+prompt elite blue green
 
 # Completion
 autoload -Uz compinit && compinit
