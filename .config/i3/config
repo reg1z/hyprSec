@@ -45,7 +45,7 @@ exec_always --no-startup-id autotiling --limit 2
 
 
 # Set desktop background to wallpaper
-exec --no-startup-id ./set-i3-wallpaper.sh
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/blackarch/befree_world_blue.png
 
 # Set desktop background color to solid black
 #exec --no-startup-id xsetroot -solid "#000000"
