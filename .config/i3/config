@@ -41,6 +41,7 @@ exec --no-startup-id nm-applet
 # i3 autotiling for bspwm-like tiling
 exec_always --no-startup-id autotiling --limit 2
 
+
 # Set desktop background to wallpaper
 exec --no-startup-id ./set-i3-wallpaper.sh
 
