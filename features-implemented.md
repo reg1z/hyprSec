@@ -12,7 +12,16 @@
 
 ## System
 
-- [-] Hyprland Ecosystem
+- Hyprland Keybindings
+    - [ ] Keybinds for managing window groups. See the window group [Dispatchers](https://wiki.hypr.land/Configuring/Dispatchers/#list-of-dispatchers) for bindable actions.
+    - [ ] "Game Mode"
+      - [ ] Animations on/off toggle
+      - [ ] Gaps & rounding on/off toggle
+      - [ ] Waybar on/off toggle
+    - [?] QWERTY-oriented layout?
+      - 🤔 The keys for many bindings have semantic associations with their function. It might be that a significant portion of the keybindings could be considered layout-agnostic.
+
+- [-] Hyprland Extended Ecosystem
     - [x] hyprpaper/wallpaper config
     - [x] hyprpolkitagent
     - [-] hyprlock
@@ -41,9 +50,7 @@
   - [ ] Able to parse hyprland bind flags. See [the hyprland wiki page](https://wiki.hypr.land/Configuring/Binds/#bind-flags) for details.
 
 
-### Keyboard
 
-- [ ] Layout Selection
 
 #### Hyprland Keymaps
 
