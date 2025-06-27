@@ -41,22 +41,16 @@ packages=(
   "pipewire"
   "wireplumber"
   "playerctl" # media player controller
-  "qt5-wayland"
-  "qt6-wayland"
   "grim"              # screenshot utility
   "slurp"             # region selection utility (for grim)
-  "loupe"             # image viewer
-  "thunar"            # file manager
-  "gvfs"              # file system support for thunar
   "tmux"              # terminal multiplexer
   "kitty"             # terminal emulator
-  "firefox"           # web browser
-  "vlc"               # media player
   "ttf-fira-sans"     # font
   "ttf-fira-code"     # font
   "ttf-firacode-nerd" # font
   "ttf-terminus-nerd" # font
 )
+
 
 # Create necessary directories
 mkdir -p $USER_HOME/.config
@@ -67,6 +61,8 @@ mkdir -p $USER_HOME/.config/mako
 
 # Install required packages
 sudo pacman -S --needed ${packages[@]}
+source ./$SCRIPTS/setup-qt.sh
+source ./$SCRIPTS/install-default-apps.sh
 
 # ASCII art
 gum style --foreground="#E23737" --bold <<EOM
