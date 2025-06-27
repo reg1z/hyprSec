@@ -1,0 +1,11 @@
+[Unit]
+Description=Start Flatpak App on Login
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=flatpak run net.mkiol.SpeechNote
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
