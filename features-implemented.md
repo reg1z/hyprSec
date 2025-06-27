@@ -116,10 +116,9 @@ Refine current layout. The current layout is made with the enthium KB layout in 
   - [ ] Photo Editing (GIMP, etc)
   - [ ] Video Editing software (kdenlive, davinci resolve, etc)
 
-- [ ] Locally-hosted (on-device) speech-to-text implementation.
-  - [?] Via a faster-whisper integration, or something else?
+- [x] Locally-hosted (on-device) speech-to-text implementation.
+  - [x] To text input currently in-focus
   - [ ] To clipboard
-  - [ ] To text input currently in-focus
 
 
 - [ ] Emoji Selector
