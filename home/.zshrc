@@ -18,7 +18,7 @@ bindkey '^?' backward-delete-char   # make backspace work
 
 # Prompt Theme
 autoload -Uz promptinit && promptinit
-prompt elite blue green
+prompt oliver blue
 
 # Completion
 autoload -Uz compinit && compinit
