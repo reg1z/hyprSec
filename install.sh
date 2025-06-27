@@ -134,8 +134,8 @@ fi
 # --------------------------------------------------------------
 
 # Ask if user wants to install neovim
-if gum confirm --default=false "Do you want to install neovim?"; then
-  source $SCRIPTS/install-nvim.sh
+if gum confirm --default=false "Do you want to install Vim, Neovim, or Vi?"; then
+  source $SCRIPTS/vim/install-nvim.sh
 fi
 
 # --------------------------------------------------------------
