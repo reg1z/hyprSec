@@ -16,7 +16,7 @@ cp -rf --remove-destination .config/waybar/* $USER_HOME/.config/waybar
 cp -rf --remove-destination .config/rofi/* $USER_HOME/.config/rofi
 cp -rf --remove-destination .config/mako/* $USER_HOME/.config/mako
 cp -rf --remove-destination .config/kitty/* $USER_HOME/.config/kitty
-cp -f home/.* $USER_HOME/
+cp -rf home/.* $USER_HOME/
 
 # Copy wallpapers to ~/Pictures/wallpapers/
 mkdir -p $USER_HOME/Pictures/wallpapers

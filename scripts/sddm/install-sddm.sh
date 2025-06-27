@@ -15,7 +15,7 @@ CURRENT_USER=$(whoami)
 
 sudo pacman -S --needed sddm sddm-kcm --noconfirm
 
-source ./import-sddm-configs.sh
+source $SCRIPTS/sddm/import-sddm-configs.sh
 
 # Enable sddm service
 sudo systemctl enable sddm.service
