@@ -1,0 +1,43 @@
+# XDG
+export XDG_CURRENT_DESKTOP=Hyprland
+export XDG_SESSION_TYPE=wayland
+export XDG_SESSION_DESKTOP=Hyprland
+
+# GDK
+export GDK_BACKEND=wayland,x11,*
+
+# Qt / KDE App Environment Variables
+export QT_QPA_PLATFORM=wayland;xcb
+export QT_QPA_PLATFORMTHEME=qt6ct
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+export QT_STYLE_OVERRIDE=kvantum
+
+# Cursor Theming
+#export XCURSOR_THEME
+export XCURSOR_SIZE=36
+
+# ------------------------------------------
+# NVIDIA https://wiki.hyprland.org/Nvidia/
+# ------------------------------------------
+#
+# Remove/comment out everything below this line if
+# not using an nvidia graphics card
+
+export GBM_BACKEND=nvidia-drm
+export LIBVA_DRIVER_NAME=nvidia
+export SDL_VIDEODRIVER=wayland
+export WLR_DRM_NO_ATOMIC=1
+export __GL_VRR_ALLOWED=1
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+export __NV_PRIME_RENDER_OFFLOAD=1
+export __VK_LAYER_NV_optimus=NVIDIA_only
+
+# FOR VM and POSSIBLY NVIDIA
+export WLR_NO_HARDWARE_CURSORS=1 # On hyprland >v0.41, now configured on variable cursor section
+export WLR_RENDERER_ALLOW_SOFTWARE=1
+
+# nvidia firefox (for hardware acceleration on FF)?
+# check this post https://github.com/elFarto/nvidia-vaapi-driver#configuration
+export MOZ_DISABLE_RDD_SANDBOX=1
+export EGL_PLATFORM=wayland
