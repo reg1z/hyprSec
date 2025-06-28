@@ -40,7 +40,7 @@ packages=(
   "mako"         # notification daemon
   "pipewire"
   "wireplumber"
-  "playerctl" # media player controller
+  "playerctl"         # media player controller
   "grim"              # screenshot utility
   "slurp"             # region selection utility (for grim)
   "tmux"              # terminal multiplexer
@@ -50,7 +50,6 @@ packages=(
   "ttf-firacode-nerd" # font
   "ttf-terminus-nerd" # font
 )
-
 
 # Create necessary directories
 mkdir -p $USER_HOME/.config
@@ -208,6 +207,10 @@ source $SCRIPTS/set-shell.sh
 
 if gum confirm --default=false "Would you like to install flatpak? This is required for installing applications from flathub."; then
   source $SCRIPTS/install-flatpak.sh
+fi
+
+if gum confirm --default=false "Would you like to install speechnote, a locally hosted Speech-to-Text and Text-to-Speech application? Flatpak is required and will be installed if you select yes."; then
+  source $SCRIPTS/speechnote/install-speechnote.sh
 fi
 
 # Ask for the user's $SHELL of choice

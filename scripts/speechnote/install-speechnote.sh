@@ -6,6 +6,7 @@ CURRENT_USER=$(whoami)
 
 # Ask user to install flatpak if they haven't already.
 #echo "This script only supports installation of the flatpak version of speechnote. You must have flatpak. If you haven't installed it beforehand, would you like to do so now?"
+sudo pacman -S flatpak --needed --noconfirm
 
 flatpak install net.mkiol.SpeechNote
 
