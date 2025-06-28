@@ -23,4 +23,4 @@ mkdir -p $USER_HOME/Pictures/wallpapers
 cp -rf assets/wallpapers/* $USER_HOME/Pictures/wallpapers/
 cp -rf assets/hyprcursor_themes/* $USER_HOME/.local/share/icons
 
-source $SCRIPTS/import-uwsm.sh # Import uwsm environment variables
+source $SCRIPTS/uwsm/import-uwsm.sh # Import uwsm environment variables
