@@ -29,6 +29,8 @@ packages=(
   "hyprpaper"
   "hypridle"
   "hyprlock"
+  "xdg-desktop-portal"
+  "xdg-desktop-portal-gtk"
   "xdg-desktop-portal-hyprland"
   "hyprland-qt-support"
   "hyprcursor"
