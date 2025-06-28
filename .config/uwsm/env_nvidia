@@ -1,7 +1,8 @@
 # XDG
-export XDG_CURRENT_DESKTOP=Hyprland
-export XDG_SESSION_TYPE=wayland
-export XDG_SESSION_DESKTOP=Hyprland
+# (these are are actually not needed as uwsm manages them for us)
+#export XDG_CURRENT_DESKTOP=Hyprland
+#export XDG_SESSION_TYPE=wayland
+#export XDG_SESSION_DESKTOP=Hyprland
 
 # GDK
 export GDK_BACKEND=wayland,x11,*
