@@ -23,4 +23,9 @@ mkdir -p $USER_HOME/Pictures/wallpapers
 cp -rf assets/wallpapers/* $USER_HOME/Pictures/wallpapers/
 cp -rf assets/hyprcursor_themes/* $USER_HOME/.local/share/icons
 
+# Enables kitty in dolphin right-click "open terminal" menu
+cp -f .config/kdeglobals $USER_HOME/.config
+
+# Service-specific scripts
 source $SCRIPTS/uwsm/import-uwsm.sh # Import uwsm environment variables
+source $SCRIPTS/xdg/import-xdg-configs.sh
