@@ -12,6 +12,8 @@ mkdir -p $USER_HOME/.config/kitty
 mkdir -p $USER_HOME/.config/Kvantum
 mkdir -p $USER_HOME/.config/qt6ct
 mkdir -p $USER_HOME/.config/qt5ct
+mkdir -p $USER_HOME/.config/gtk-3.0
+mkdir -p $USER_HOME/.config/gtk-4.0
 
 # Copy configuration to ~/.config and home directory
 cp -rf --remove-destination .config/hypr/* $USER_HOME/.config/hypr
@@ -22,6 +24,8 @@ cp -rf --remove-destination .config/kitty/* $USER_HOME/.config/kitty
 cp -rf --remove-destination .config/Kvantum/* $USER_HOME/.config/Kvantum
 cp -rf --remove-destination .config/qt6ct/* $USER_HOME/.config/qt6ct
 cp -rf --remove-destination .config/qt5ct/* $USER_HOME/.config/qt5ct
+cp -rf --remove-destination .config/gtk-3.0/* $USER_HOME/.config/gtk-3.0
+cp -rf --remove-destination .config/gtk-4.0/* $USER_HOME/.config/gtk-4.0
 cp -rf home/.* $USER_HOME/
 
 # Copy wallpapers to ~/Pictures/wallpapers/
