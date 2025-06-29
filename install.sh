@@ -63,7 +63,9 @@ mkdir -p $USER_HOME/.config/mako
 # Install required packages
 sudo pacman -S --needed ${packages[@]}
 source ./$SCRIPTS/setup-qt.sh
-source ./$SCRIPTS/install-default-apps.sh
+#source ./$SCRIPTS/install-default-apps.sh
+#source ./$SCRIPTS/suite_kde/install-kde-apps.sh
+source ./$SCRIPTS/suite_xfce/install-xfce-apps.sh
 
 # ASCII art
 gum style --foreground="#E23737" --bold <<EOM

@@ -14,9 +14,10 @@ export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export QT_STYLE_OVERRIDE=kvantum
 
-# Cursor Theming
+# Theming
 #export XCURSOR_THEME
 export XCURSOR_SIZE=36
+export GTK_THEME='Adwaita:dark'
 
 # ------------------------------------------
 # NVIDIA https://wiki.hyprland.org/Nvidia/
