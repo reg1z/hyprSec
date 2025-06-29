@@ -14,7 +14,6 @@ defaultAppPackages=(
   "ristretto"                # image viewer
   "mousepad"                 # Simple text editor
   "xfce4-taskmanager"        # Task Manager
-  "nwg-look"
 )
 
 # Install required packages

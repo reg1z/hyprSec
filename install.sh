@@ -43,6 +43,7 @@ packages=(
   "pipewire"
   "wireplumber"
   "playerctl"         # media player controller
+  "brightnessctl"     # brightness controller
   "grim"              # screenshot utility
   "slurp"             # region selection utility (for grim)
   "tmux"              # terminal multiplexer
@@ -62,10 +63,21 @@ mkdir -p $USER_HOME/.config/mako
 
 # Install required packages
 sudo pacman -S --needed ${packages[@]}
-source ./$SCRIPTS/setup-qt.sh
+
+# --------------------------------------------------------------
+# Application Suites
+# --------------------------------------------------------------
+
+# Primary suite selection script (WIP)
 #source ./$SCRIPTS/install-default-apps.sh
+
+# KDE Suite (lots of package bloat and difficult to theme w/o experiencing bugs)
 #source ./$SCRIPTS/suite_kde/install-kde-apps.sh
+#source ./$SCRIPTS/qt/setup-qt.sh
+
+# XFCE Suite
 source ./$SCRIPTS/suite_xfce/install-xfce-apps.sh
+source ./$SCRIPTS/gtk/install-gtk-themes.sh
 
 # ASCII art
 gum style --foreground="#E23737" --bold <<EOM
