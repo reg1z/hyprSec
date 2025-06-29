@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 SCRIPTS="scripts"
-USER_HOME=$(eval echo "~${SUDO_USER:-$USER}")
-CURRENT_USER=$(whoami)
+CURRENT_USER="$(whoami)"
+USER_HOME="$(eval echo "~${SUDO_USER:-$USER}")"
 
 BACKUPS=$USER_HOME/Backups
 
@@ -23,6 +23,7 @@ mkdir -p "$backup_dir"
 cp -r $USER_HOME/.config "$backup_dir"
 
 # Backup bash configuration files
-cp -f $USER_HOME/.*profile $USER_HOME/.*rc "$backup_dir" 2>/dev/null || true
+cp -f $USER_HOME/.*profile "$backup_dir" 2>/dev/null || true
+cp -f $USER_HOME/.*rc "$backup_dir" 2>/dev/null || true
 
 echo "Dotfiles (including shell profiles and .rc files in $USER_HOME) backed up to $backup_dir."

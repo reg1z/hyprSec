@@ -9,6 +9,9 @@ mkdir -p $USER_HOME/.config/waybar
 mkdir -p $USER_HOME/.config/rofi
 mkdir -p $USER_HOME/.config/mako
 mkdir -p $USER_HOME/.config/kitty
+mkdir -p $USER_HOME/.config/Kvantum
+mkdir -p $USER_HOME/.config/qt6ct
+mkdir -p $USER_HOME/.config/qt5ct
 
 # Copy configuration to ~/.config and home directory
 cp -rf --remove-destination .config/hypr/* $USER_HOME/.config/hypr
@@ -16,6 +19,9 @@ cp -rf --remove-destination .config/waybar/* $USER_HOME/.config/waybar
 cp -rf --remove-destination .config/rofi/* $USER_HOME/.config/rofi
 cp -rf --remove-destination .config/mako/* $USER_HOME/.config/mako
 cp -rf --remove-destination .config/kitty/* $USER_HOME/.config/kitty
+cp -rf --remove-destination .config/Kvantum/* $USER_HOME/.config/Kvantum
+cp -rf --remove-destination .config/qt6ct/* $USER_HOME/.config/qt6ct
+cp -rf --remove-destination .config/qt5ct/* $USER_HOME/.config/qt5ct
 cp -rf home/.* $USER_HOME/
 
 # Copy wallpapers to ~/Pictures/wallpapers/

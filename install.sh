@@ -94,6 +94,10 @@ if gum confirm --default=false "Do you want to delete the relevant files in ~/.c
   rm -rf $USER_HOME/.config/rofi
   rm -rf $USER_HOME/.config/mako
   rm -rf $USER_HOME/.config/kitty
+  rm -rf $USER_HOME/.config/uwsm
+  rm -rf $USER_HOME/.config/Kvantum
+  rm -rf $USER_HOME/.config/qt6ct
+  rm -rf $USER_HOME/.config/qt5ct
 fi
 
 # --------------------------------------------------------------
