@@ -26,6 +26,10 @@ cp -rf home/.* $USER_HOME/
 
 # Copy wallpapers to ~/Pictures/wallpapers/
 mkdir -p $USER_HOME/Pictures/wallpapers
+mkdir -p $USER_HOME/.local
+mkdir -p $USER_HOME/.local/share
+mkdir -p $USER_HOME/.local/share/icons
+
 cp -rf assets/wallpapers/* $USER_HOME/Pictures/wallpapers/
 cp -rf assets/hyprcursor_themes/* $USER_HOME/.local/share/icons
 
