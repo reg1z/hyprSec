@@ -1,6 +1,7 @@
 # -----------------------------------------------------
 # Monitor Setup
-# name: "2xMonitors"
+# name: "3xMonitors"
+# note: 1x 1080p portrait left-hand, 1x 1440p landscape mid, 1x 1080p portrait right-hand
 # -----------------------------------------------------
 
 monitor=DP-3,2560x1440@165.02,1080x0,1

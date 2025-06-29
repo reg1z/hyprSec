@@ -16,8 +16,8 @@ export QT_STYLE_OVERRIDE=kvantum
 
 # Theming
 #export XCURSOR_THEME
-export XCURSOR_SIZE=36
-export GTK_THEME='Adwaita:dark'
+#export XCURSOR_SIZE=36
+#export GTK_THEME='Adwaita:dark'
 
 # Testing
 #export SDL_VIDEODRIVER=wayland
