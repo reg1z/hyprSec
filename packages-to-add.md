@@ -12,3 +12,4 @@ less -> lots of other CLI programs (e.g. `ansible-doc`) use this to display thei
 discord
 signal
 obsidian
+libreoffice
