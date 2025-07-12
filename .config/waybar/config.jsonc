@@ -1,81 +1,85 @@
 {
-    "position": "top", 
-    "height": 0,
-    "modules-left": ["hyprland/workspaces"],
-    "modules-right": ["network", "pulseaudio", "backlight", "battery", "clock", "tray"],
-    // Modules configuration
-	"clock": {
-		"format": "{:%d/%m %H:%M}",
-		"tooltip": "false",
-//        	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        	"format-alt": "{:%a %d %B %Y}"
-	},
-	
+    "position": "top",
+    "height": 20,
+    "spacing": 25,
+    
+    "modules-left": ["hyprland/workspaces#special"],
+    "modules-center": ["hyprland/workspaces#normal"],
+    "modules-right": ["privacy", "pulseaudio", "backlight", "battery", "tray", "network", "clock"],
+    
+    // Module configurations
+    "hyprland/workspaces#normal": {
+        "on-click": "activate",
+        "sort-by-number": true
+    },
 
-	"hyprland/workspaces": {
-//		"format": "{icon}",
-		"on-click": "activate",
-//		"format-icons": {
-//			"1": "",
-//			"2": "",
-//			"3": "",
-//			"4": "",
-//			"5": "",
-//			"urgent": "",
-//			"active": "",
-//			"default": ""
-		"sort-by-number": true,
-		},
-
-	"battery": {
+    "hyprland/workspaces#special": {
+        "format": "{name}",
+        "show-special": true,
+        "special-visible-only": false,
+        "persistent-only": false,
+        "hide-active": true,
+        "ignore-workspaces": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"]
+    },
+    
+    "network": {
+        "format-wifi": " {essid}",
+        "format-ethernet": " {ipaddr}",
+        "format-linked": " {ifname} (No IP)",
+        "format-disconnected": "⚠ Disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}"
+    },
+    
+    "pulseaudio": {
+        "format": "🔊 {volume}%",
+        "format-muted": " Muted",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    
+    "battery": {
         "states": {
             "good": 95,
             "warning": 30,
             "critical": 15
         },
-        "format":"{icon}  {capacity}%",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
         "format-alt": "{icon} {time}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
-	},
-	
-	"network": {
-        	"format-wifi": " {essid}",
-        	"format-ethernet": " Connesso",
-        	"format-linked": " {ifname} (No IP)",
-        	"format-disconnected": "Disconnesso",
-        	"format-alt": " {ifname}: {ipaddr}/{cidr}"
-	},
+        "format-icons": ["", "", "", "", ""]
+    },
+    
+    "clock": {
+        "format": "{:%Y-%m-%d %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%A, %B %d, %Y}"
+    },
+    
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    },
 
-	"tray": {
-		"icon-size": 14,
-		"spacing": 5
-	},
-
-	"backlight": {
-        // "device": "acpi_video1",
-	"format": "{icon} {percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""],
-//	"on-scroll-up":,
-//	"on-scroll-down":,
-	},
-
-	"pulseaudio": {
-		"format": "{icon} {volume}%",
-        	"format-muted": " muto",
-		"format-icons": {
-			"headphone": "",
-			"hands-free": "",
-			"headset": "",
-			"phone": "",
-			"portable": "",
-			"car": "",
-			"default": ["", "", ""]
-		},
-		"on-click": "pamixer --toggle-mute",
-		"on-click-right": "/home/fra/scripts/volume/on-off.sh",
+    "privacy": {
+        "icon-size": 16,
+        "spacing": 10,
+        "format": "🔒",
+        "type": "screenshare"
     }
+    
 }
+
