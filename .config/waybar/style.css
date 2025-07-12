@@ -1,8 +1,8 @@
 * {
     border: 0px solid #24283b;
-    border-radius: 10px;
-    font-family: FiraSans;
-    font-size: 14px;
+    border-radius: 4px;
+    font-family: FiraSans Compressed;
+    font-size: 15px;
     min-height: 0;
 }
 window#waybar {
@@ -10,7 +10,7 @@ window#waybar {
 }
 
 .modules-left, .modules-right, .modules-center {
-    border: 1px solid #00BCD4;
+    border: 0px solid #00BCD4;
     padding: 2px 2px;
 }
 
@@ -34,7 +34,7 @@ window#waybar {
 #workspaces.normal button {
     padding: 0 5px;
     background: transparent;
-    border: 1px solid transparent;
+    border: 0px solid #00BCD4;
     border-radius: 5px;
 }
 
@@ -50,18 +50,19 @@ window#waybar {
 
 #workspaces.special {
     background: transparent;
-    border: 0px solid transparent;
     border-radius: 5px;
+    border: 0px solid #00BCD4;
 }
 
 #workspaces.special button {
     padding: 0 5px;
+    margin-right: 5px;
     background: transparent;
-    border: 1px solid transparent;
+    border: 1px solid #00BCD4;
     border-radius: 5px;
 }
 #workspaces.special button.active {
-    border: 2px solid #FF966C;
+    border: 1px solid #FF966C;
     padding-left: 10px;
     padding-right: 10px;
     margin-left: 10px;

@@ -1,7 +1,8 @@
 {
     "position": "top",
-    "height": 20,
+    "height": 10,
     "spacing": 25,
+    "icon-size": 10,
     
     "modules-left": ["hyprland/workspaces#special"],
     "modules-center": ["hyprland/workspaces#normal"],
@@ -19,6 +20,7 @@
         "special-visible-only": false,
         "persistent-only": false,
         "hide-active": true,
+        "sort-by": "name",
         "ignore-workspaces": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"]
     },
     
@@ -64,18 +66,16 @@
     },
     
     "clock": {
-        "format": "{:%Y-%m-%d %H:%M}",
+        "format": "{:%Y-%m-%d %H:%M:%S}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%A, %B %d, %Y}"
     },
     
     "tray": {
-        "icon-size": 16,
         "spacing": 10
     },
 
     "privacy": {
-        "icon-size": 16,
         "spacing": 10,
         "format": "🔒",
         "type": "screenshare"
