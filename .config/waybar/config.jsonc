@@ -11,7 +11,7 @@
     // Module configurations
     "hyprland/workspaces#normal": {
         "on-click": "activate",
-        "sort-by-number": true
+        "sort-by": "name",
     },
 
     "hyprland/workspaces#special": {
@@ -21,7 +21,7 @@
         "persistent-only": false,
         "hide-active": true,
         "sort-by": "name",
-        "ignore-workspaces": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"]
+        "ignore-workspaces": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "FM", "Files", "Notes", "Disc", "Signal", "Dictionary", "VM0", "VM1", "VM2"]
     },
     
     "network": {
