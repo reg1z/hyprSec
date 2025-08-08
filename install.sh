@@ -42,16 +42,17 @@ packages=(
   "mako"         # notification daemon
   "pipewire"
   "wireplumber"
-  "playerctl"         # media player controller
-  "brightnessctl"     # brightness controller
-  "grim"              # screenshot utility
-  "slurp"             # region selection utility (for grim)
-  "tmux"              # terminal multiplexer
-  "kitty"             # terminal emulator
-  "ttf-fira-sans"     # font
-  "ttf-fira-code"     # font
-  "ttf-firacode-nerd" # font
-  "ttf-terminus-nerd" # font
+  "playerctl"     # media player controller
+  "brightnessctl" # brightness controller
+  "grim"          # screenshot utility
+  "slurp"         # region selection utility (for grim)
+  "tmux"          # terminal multiplexer
+  "kitty"         # terminal emulator
+  "qt5-wayland"
+  "qt5-wayland"
+  "man-db"
+  "wget"
+  "tealdear"
 )
 
 # Create necessary directories
@@ -62,7 +63,10 @@ mkdir -p $USER_HOME/.config/rofi
 mkdir -p $USER_HOME/.config/mako
 
 # Install required packages
-sudo pacman -S --needed ${packages[@]}
+sudo pacman -S --needed --noconfirm ${packages[@]}
+
+# Install fonts
+source ./$SCRIPTS/fonts/install-fonts.sh
 
 # --------------------------------------------------------------
 # Application Suites
