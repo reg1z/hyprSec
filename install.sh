@@ -35,24 +35,29 @@ packages=(
   "hyprland-qt-support"
   "hyprcursor"
   "hyprpolkitagent" # polkit agent
-  "wl-clipboard"
-  "cliphist"
-  "waybar"
-  "rofi-wayland" # application launcher
-  "mako"         # notification daemon
-  "pipewire"
-  "wireplumber"
-  "playerctl"     # media player controller
-  "brightnessctl" # brightness controller
-  "grim"          # screenshot utility
-  "slurp"         # region selection utility (for grim)
-  "tmux"          # terminal multiplexer
-  "kitty"         # terminal emulator
+  "wl-clipboard"    # wayland clipboard
+  "cliphist"        # clipboard history
+  "waybar"          # status bar
+  "rofi-wayland"    # application launcher
+  "mako"            # notification daemon
+  "pipewire"        # audio daemon
+  "wireplumber"     # session + policy manager for pipewire
+  "playerctl"       # media player controller
+  "brightnessctl"   # brightness controller
+  "grim"            # screenshot utility
+  "slurp"           # region selection utility (for grim)
+  "tmux"            # terminal multiplexer
+  "kitty"           # terminal emulator
   "qt5-wayland"
-  "qt5-wayland"
-  "man-db"
-  "wget"
-  "tealdear"
+  "qt6-wayland"
+  "man-db" # "man" command / man pages support
+  "curl"
+  "wget"           # "wget" command (curl alternative)
+  "openbsd-netcat" # netcat / nc
+  "tealdear"       # TLDR pages
+  "rust"           # Lang: Rust
+  "python"         # Lang: Python
+  "perl"           # Lang: Perl
 )
 
 # Create necessary directories
